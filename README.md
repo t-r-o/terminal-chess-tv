@@ -1,6 +1,6 @@
 # Terminal Chess TV
 
-![A gif of the game](./demo.gif)
+![A gif of the game](https://raw.githubusercontent.com/t-r-o/terminal-chess-tv/main/demo.gif)
 
 Continuously shows ongoing high-rated blitz games from [Lichess](https://lichess.org) in your terminal.
 
