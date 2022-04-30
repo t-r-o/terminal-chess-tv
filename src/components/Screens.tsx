@@ -11,7 +11,7 @@ import { gradientColours, startGradientColour } from '../colours'
 import { AppConfig } from '../types'
 
 type Screen = 'Menu' | 'TV' | 'About'
-const githubUrl = 'https://github.com/t-r-o'
+const githubUrl = 'https://github.com/t-r-o/terminal-chess-tv'
 
 export type ScreensProps = Pick<AppConfig, 'isFullscreen' | 'useMockedGames'>
 

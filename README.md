@@ -2,7 +2,7 @@
 
 ![A gif of the game](./demo.gif)
 
-Continuously shows ongoing games from [Lichess](https://lichess.org) in your terminal.
+Continuously shows ongoing high-rated blitz games from [Lichess](https://lichess.org) in your terminal.
 
 An excuse for playing around with [ink](https://github.com/vadimdemedes/ink) and [React](https://reactjs.org).
 
