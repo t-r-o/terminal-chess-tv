@@ -20,6 +20,5 @@ or
 
 ## TODOs
 
-- Add board flip control
-- Add board labels on edge (i.e. 1-8, A-H)
-- Add colour controls to allow game to work in non-dark terminals
+- Add control to flip board
+- Add options menu to change colours of pieces, board, etc
