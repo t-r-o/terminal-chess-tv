@@ -11,6 +11,7 @@
 		"start": "npm run build && dist/cli.js",
 		"start:dev": "npm run build && dist/cli.js -f false -l true",
 		"start:mock": "npm run build && dist/cli.js -m true",
+        "prepublish": "npm run build",
 		"pretest": "npm run build",
 		"test": "jest",
 		"lint": "eslint src/**/*.ts src/**/*.tsx",
