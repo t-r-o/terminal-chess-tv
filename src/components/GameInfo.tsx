@@ -48,8 +48,10 @@ function GameResultBox (props: Pick<GameInfoProps, 'result'>) {
 
 export function LoadingGame () {
   return (
-        <Box flexDirection='column' justifyContent='center' paddingLeft={10} paddingRight={10} marginTop={1}>
-            <Gradient colors={gradientColours}><Text bold={true}>Loading next game...</Text></Gradient>
+        <Box flexDirection='column' justifyContent='center' width={chessBoardWidth} paddingX={6} height={3}>
+            <Text>
+              <Gradient colors={gradientColours}><Text bold={true}>Loading next game...</Text></Gradient>
+            </Text>
         </Box>
   )
 }

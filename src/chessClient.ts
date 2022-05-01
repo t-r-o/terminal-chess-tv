@@ -234,7 +234,7 @@ export class MockClient {
     const file = await fs.promises.readFile(mockGamesPath, 'utf-8')
     return new Promise((resolve) => {
       // realism when producing GIF of terminal
-      setTimeout(resolve, 400)
+      setTimeout(resolve, 750)
     }).then(() => extractGames(file).map(convert))
   }
 }

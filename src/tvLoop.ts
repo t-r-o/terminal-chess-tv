@@ -22,7 +22,7 @@ export default async function tvLoop (transform: UITransformer, shouldContinue: 
 }
 
 const gameStartPauseMs = 1000
-const gameEndPauseMs = 1000
+const gameEndPauseMs = 1250
 const zeroTimeMovePauseMs = 400
 
 function toActions (next: Next, transformer: UITransformer): UIAction[] {
