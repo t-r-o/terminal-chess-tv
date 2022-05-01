@@ -1,4 +1,3 @@
-import winston from 'winston'
 import { Game } from './chessClient'
 import { Decisive, GameResult, UIState } from './types'
 
@@ -24,13 +23,8 @@ export class MoveStream {
   constructor (private readonly gameClient: { getGame(id?: string): Promise<Game> }) {}
 
   async next (): Promise<Next> {
-    winston.info('Called next...')
     if (this.currentGame === undefined) {
-      winston.info('Current game undefined so refreshing...')
       this.currentGame = await this.gameClient.getGame()
-      winston.info('Refreshed current game')
-      winston.info('White title: ' + this.currentGame.white.title)
-      winston.info('Black title: ' + this.currentGame.black.title)
       return {
         white: {
           name: this.currentGame.white.name,

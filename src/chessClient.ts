@@ -2,7 +2,6 @@ import fs from 'fs'
 import axios from 'axios'
 import { Chess } from 'chess.js'
 import { zipMap } from './utils'
-import winston from 'winston'
 
 export type Game = {
     id: string
@@ -211,18 +210,12 @@ export class MockClient {
   }
 
   async getGame (id?: string): Promise<Game> {
-    winston.info('Got gameGame call to Mock client')
     if (id !== undefined) {
-      winston.info('We do not accept the id')
       return Promise.reject(new Error('Mock client does not implement queries by id'))
     }
-    winston.info('Checking game length')
-    winston.info('Games is undefined: ' + this.games)
     if (this.games.length === 0) {
       // Load games
-      winston.info('Attempting to load games')
       this.games = await this.loadGames()
-      winston.info('Loaded games number: ' + this.games.length)
     }
     if (this.currentGame === this.games.length) {
       // reset and loop
@@ -238,7 +231,6 @@ export class MockClient {
   }
 
   async loadGames (): Promise<Array<Game>> {
-    winston.info('Loading mock games')
     const file = await fs.promises.readFile(mockGamesPath, 'utf-8')
     return new Promise((resolve) => {
       // realism when producing GIF of terminal

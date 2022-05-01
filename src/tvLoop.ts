@@ -12,7 +12,6 @@ type TransformUI = (prev: UIState | undefined) => UIState | undefined
 type UITransformer = React.Dispatch<React.SetStateAction<UIState | undefined>>
 
 export default async function tvLoop (transform: UITransformer, shouldContinue: () => boolean, useMockedGames = false) {
-  winston.info('Using mocked games: ' + useMockedGames)
   const moveStream = useMockedGames ? new MoveStream(new MockClient()) : new MoveStream({ getGame })
   while (shouldContinue()) {
     const next = await moveStream.next()
